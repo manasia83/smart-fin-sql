@@ -24,7 +24,8 @@
 - Trained on a curated dataset of ~50+ NL query templates with domain knowledge  
 - Uses `T5-small` transformer for fast inference (CPU-friendly)  
 - Clean web UI to enter natural language → see SQL → view query results  
-- FastAPI backend with `/predict` and `/run-query` endpoints  
+- FastAPI backend with `/predict` and `/run-query` endpoints
+- Secure — only SELECT queries are allowed  
 
 ---
 
@@ -154,13 +155,6 @@ python api_server.py
 # Visit http://localhost:8000
 ```
 
----
-
-## 💡 Unique Features
-
-- Replaces Streamlit with HTML + FastAPI UI  
-- Secure — only SELECT queries are allowed  
-- Future support for fallback mechanism on invalid prompts  
 
 ---
 
@@ -175,5 +169,6 @@ python api_server.py
 
 ## 📜 Future Enhancements
 
-- Add chatbot interface with memory/context  
-- Expand training to include risk metrics, temporal logic
+- Add chatbot interface
+- Future support for fallback mechanism on invalid prompts  
+
