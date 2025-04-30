@@ -138,7 +138,7 @@ FIN_SQL/
 ├── data/
 ├── batch_predict.py
 ├── train_compact.py
-├── DS_fixed_income_training_generator.py
+├── DS_fixed_income_training_generator.py #Training Data script using Gen AI
 ├── README.md
 ├── About.html
 └── requirements.txt
