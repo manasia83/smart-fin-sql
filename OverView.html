@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartFin SQL - Project Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            margin: 20px auto;
+            max-width: 960px;
+            padding: 20px;
+            color: #333;
+            background: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #0b5394;
+        }
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 90%;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            overflow-x: auto;
+            border-left: 4px solid #0b5394;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 6px 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #d9e2f3;
+        }
+        a {
+            color: #0b5394;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📊 SmartFin SQL: Natural Language to SQL</h1>
+       
+    <p><strong>Smart-Fin-SQL</strong> is a compact, fine-tuned natural language to SQL (NL2SQL) model designed specifically for Fixed Income Portfolios. It enables finance teams, analysts, and testers to run complex SQL queries on structured bond portfolio databases using plain English.</p>
+
+    <h2>🙋‍♂️ Who Can Use This?</h2>
+    <ul>
+        <li>Finance teams running daily ad-hoc reports</li>
+        <li>Testers validating data pipelines</li>
+        <li>Analysts who don’t know SQL syntax</li>
+    </ul>
+
+    <h2>🚀 Features</h2>
+    <ul>
+        <li>Trained on a compact, curated dataset of ~50+ distinct natural language query templates with domain knowledge.</li>
+        <li>Uses <b>T5-small</b> transformer architecture for fast inference on CPU.</li>
+        <li>Supports a sleek web UI for Entering NL statements ➝ Viewing SQL + query results.</li>
+        <li>FastAPI backend with <code>/predict</code> and <code>/run-query</code> endpoints.</li>
+    </ul>
+
+    <h2>🚀 How It Works</h2>
+    <ol>
+        <li>User enters a natural language query via web UI or API.</li>
+        <li>The backend uses a fine-tuned <code>T5-small</code> model to generate SQL for the query.</li>
+        <li>The SQL is executed against a local MS SQL Server database (only for SELECTs).</li>
+        <li>Results are shown in a beautiful tabular format below the query.</li>
+    </ol>
+
+    <h2>🔎 Example Queries and Output</h2>
+    <table>
+        <tr><th>Natural Language Query</th><th>Generated SQL</th></tr>
+        <tr><td>Can you show each portfolio and the isin of securities it holds?</td><td>SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId
+▶      </td></tr>
+        <tr><td>Show top 5 securities with highest coupon rate</td><td>SELECT TOP 5 * FROM FixedIncomeSecurities ORDER BY CouponRate DESC</td></tr>
+        <tr><td>What are the securities with currency in USD or EUR?</td><td>SELECT * FROM FixedIncomeSecurities WHERE CurrencyCode IN ('USD', 'EUR')</td></tr>
+      <tr><td>List holdings with market value above average</td><td>SELECT * FROM Valuations WHERE MarketValue > (SELECT AVG(MarketValue) FROM Valuations)</td></tr>
+         <tr><td>List portfolio names and corresponding isins for holdings purchased after 2020</td><td>SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE h.PurchaseDate > '2020-01-01'</td></tr>
+    
+	</table>
+
+    <h2>🧠 Model Architecture</h2>
+    <ul>
+        <li><b>Model Used:</b> T5-small (60M parameters)</li>
+        <li><b>Framework:</b> Hugging Face Transformers</li>
+        <li><b>Training Time:</b> ~8 hours on CPU (i5 Gen, 8GB RAM)</li>
+        <li><b>Tokenizer:</b> SentencePiece-based T5Tokenizer</li>
+        <li><b>Prompt Style:</b> <code>fixed income query: {{nl_query}} [Tables: ...] [Columns: ...]</code></li>
+    </ul>
+
+    <h2>🔧 Model Training Highlights</h2>
+    <ul>
+        <li>Model: <code>T5-small</code> with domain-specific prompt tuning</li>
+        <li>Training time: ~6-8 hours on CPU-only machine (8GB RAM)</li>
+        <li>Data: Curated 50 high-quality prompt-SQL pairs, augmented to 2000+</li>
+        <li>Key logic: SELECTs, WHERE, GROUP BY, ORDER BY, LIKE, IN, IS NULL, HAVING, JOIN</li>
+    </ul>
+
+    <h2>🛠 Training Configuration</h2>
+    <pre>TrainingArguments(
+    num_train_epochs=30,
+    per_device_train_batch_size=4,
+    gradient_accumulation_steps=8,
+    learning_rate=3e-4,
+    warmup_steps=100,
+    weight_decay=0.01,
+    save_strategy="epoch",
+    logging_steps=50,
+    fp16=False,
+    logging_dir="./logs"
+)</pre>
+
+    <h2>🧪 Key Training Enhancements</h2>
+    <ul>
+        <li>Eliminated near-duplicates of numeric-only queries to improve signal.</li>
+        <li>Designed prompts with column/table hints.</li>
+        <li>Used domain-specific variations (e.g., OCI, bond types, amortized cost, etc.).</li>
+    </ul>
+
+    <h2>🧠 Other Pretrained Models You Can Try</h2>
+    <table>
+        <tr><th>Model</th><th>Description</th><th>Recommended For</th></tr>
+        <tr><td>t5-base</td><td>220M params, better accuracy but slower on CPU</td><td>Try if you have more RAM/GPU</td></tr>
+        <tr><td>codeT5-small</td><td>Pretrained on code + NL, useful for SQL/code generation</td><td>API dev, low-data settings</td></tr>
+        <tr><td>flan-t5-small</td><td>Instruction-tuned version of t5-small</td><td>Generalization</td></tr>
+    </table>
+
+    <h2>📈 Tips to Improve Performance</h2>
+    <div class="tip">
+        ✅ Add <b>entity-aware fine-tuning</b> by appending table schema to prompts.<br>
+        ✅ Use <b>diverse query phrasings</b> with conditions, filters, and grouping.<br>
+        ✅ Increase model size (T5-base or Flan-T5) if you can switch to a 16GB+ system.<br>
+        ✅ Fine-tune on task-specific error cases if predictions mismatch your intent.
+    </div>
+
+    <h2>🚀 Deployment</h2>
+    <ul>
+        <li>Start API Server → <code>python api_server.py</code></li>
+        <li>Open <code>index.html</code> locally OR deploy with Nginx/Flask static + FastAPI</li>
+        <li>Key endpoints:
+            <ul>
+                <li><code>/predict</code> → Accepts NL query and returns SQL</li>
+                <li><code>/run-query</code> → Accepts SQL (SELECT only) and returns results</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>📂 Folder Structure</h2>
+    <pre>
+FIN_SQL/
+│
+├── api_server.py         # FastAPI + Prediction + SQL execution
+├── ui/index.html         # UI Interface 
+├── model/
+│   └── t5_fixed_income_model_compact/    # Trained T5 model
+├── data                  # Training dataset and SQL schema
+├── batch_predict.py      # Utility to test batches
+├── train_compact.py      # Training script for T5-small
+├── DS_fixed_income_training_generator.py # GenAI-based data generation utility
+├── README.md
+├── About.html            # Overview
+└── requirements.txt      # Python dependencies
+    </pre>
+
+    <h2>📥 Installation</h2>
+    <pre>
+pip install -r requirements.txt
+python api_server.py
+# Visit http://localhost:8000
+    </pre>
+
+    <h2>💡 Unique Features</h2>
+    <ul>
+        <li>Streamlit replaced with HTML + FastAPI + SQLite runtime integration</li>
+        <li>Only SELECT queries allowed for safe testability</li>
+        <li>Model fallback mechanism planned for invalid/ambiguous responses</li>
+    </ul>
+    
+        <h2>⚠️ Limitations</h2>
+    <ul>
+        <li>Training was performed on a limited dataset (~2000 samples) to keep training time feasible on a low-resource machine.</li>
+        <li>No GPU was available — training was done on CPU-only system (8GB RAM, i5 processor), which restricted the model size and training epochs.</li>
+        <li>As a result, many advanced or rare SQL query types (e.g., nested queries, complex joins, CTEs) were not included.</li>
+        <li>Inference is limited to SELECT-only queries; INSERT, UPDATE, DELETE are intentionally excluded for safety and simplicity.</li>
+        <li>Accuracy might degrade with highly ambiguous or domain-unseen natural language phrasings.</li>
+    </ul>
+
+    <h2>📜 Future Enhancements</h2>
+    <ul>
+        <li>Add chatbot interface with more Training data set</li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart-Fin-SQL - NL → SQL Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 30px;
+      color: #333;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    textarea {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    input[type="submit"],
+    button {
+      background-color: #007acc;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    input[type="submit"]:hover,
+    button:hover {
+      background-color: #005f99;
+    }
+    pre {
+      background: #fdfdfd;
+      border-left: 4px solid #007acc;
+      padding: 10px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>💬 Natural Language to SQL — Smart Fixed Income</h2>
+
+  <form id="queryForm">
+    <label for="question">Type your financial question:</label><br><br>
+    <textarea id="question" name="question" rows="4" required></textarea><br>
+    <input type="submit" value="Generate SQL">
+  </form>
+
+  <h3>🧠 Generated SQL:</h3>
+  <pre id="result">-- SQL will appear here --</pre>
+
+  <button id="runQueryBtn">▶ Run SQL & Show Data</button>
+
+  <h3>📊 Query Result:</h3>
+  <div id="queryData"></div>
+
+  <script>
+    document.getElementById('queryForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const question = document.getElementById('question').value;
+      const response = await fetch('/predict', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({question: question})
+      });
+      const data = await response.json();
+      document.getElementById('result').textContent = data.sql || '-- No SQL generated --';
+      document.getElementById('queryData').innerHTML = '';
+    });
+
+    document.getElementById('runQueryBtn').addEventListener('click', async function () {
+      const sql = document.getElementById('result').textContent.trim();
+      const outputDiv = document.getElementById('queryData');
+      outputDiv.innerHTML = '';
+
+      if (!sql.toLowerCase().startsWith("select")) {
+        outputDiv.innerHTML = '<div class="error">❌ Only SELECT queries can be executed.</div>';
+        return;
+      }
+
+      try {
+        const response = await fetch('/run-query', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({sql})
+        });
+        const result = await response.json();
+        if (result.error) {
+          outputDiv.innerHTML = `<div class="error">❌ ${result.error}</div>`;
+          return;
+        }
+
+        const rows = result.rows;
+        if (rows.length === 0) {
+          outputDiv.innerHTML = '<div><b>No results found.</b></div>';
+          return;
+        }
+
+        const table = document.createElement('table');
+        const thead = table.createTHead();
+        const headerRow = thead.insertRow();
+        Object.keys(rows[0]).forEach(col => {
+          const th = document.createElement('th');
+          th.textContent = col;
+          headerRow.appendChild(th);
+        });
+
+        const tbody = table.createTBody();
+        rows.forEach(row => {
+          const tr = tbody.insertRow();
+          Object.values(row).forEach(cell => {
+            const td = tr.insertCell();
+            td.textContent = cell;
+          });
+        });
+
+        outputDiv.appendChild(table);
+      } catch (err) {
+        outputDiv.innerHTML = `<div class="error">⚠️ ${err.message}</div>`;
+      }
+    });
+  </script>
+</body>
+</html>
