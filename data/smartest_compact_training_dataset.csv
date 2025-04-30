@@ -1,0 +1,286 @@
+natural_language,sql_query
+Show all portfolios,SELECT * FROM Portfolios
+List all portfolios,SELECT * FROM Portfolios
+Fetch all portfolios,SELECT * FROM Portfolios
+Retrieve all portfolios,SELECT * FROM Portfolios
+Give me all portfolios,SELECT * FROM Portfolios
+Display all portfolios,SELECT * FROM Portfolios
+What are the all portfolios?,SELECT * FROM Portfolios
+Can you show all portfolios?,SELECT * FROM Portfolios
+Show all securities,SELECT * FROM FixedIncomeSecurities
+List all securities,SELECT * FROM FixedIncomeSecurities
+Fetch all securities,SELECT * FROM FixedIncomeSecurities
+Retrieve all securities,SELECT * FROM FixedIncomeSecurities
+Give me all securities,SELECT * FROM FixedIncomeSecurities
+Display all securities,SELECT * FROM FixedIncomeSecurities
+What are the all securities?,SELECT * FROM FixedIncomeSecurities
+Can you show all securities?,SELECT * FROM FixedIncomeSecurities
+Show all holdings,SELECT * FROM PortfolioHoldings
+List all holdings,SELECT * FROM PortfolioHoldings
+Fetch all holdings,SELECT * FROM PortfolioHoldings
+Retrieve all holdings,SELECT * FROM PortfolioHoldings
+Give me all holdings,SELECT * FROM PortfolioHoldings
+Display all holdings,SELECT * FROM PortfolioHoldings
+What are the all holdings?,SELECT * FROM PortfolioHoldings
+Can you show all holdings?,SELECT * FROM PortfolioHoldings
+Show all valuations,SELECT * FROM Valuations
+List all valuations,SELECT * FROM Valuations
+Fetch all valuations,SELECT * FROM Valuations
+Retrieve all valuations,SELECT * FROM Valuations
+Give me all valuations,SELECT * FROM Valuations
+Display all valuations,SELECT * FROM Valuations
+What are the all valuations?,SELECT * FROM Valuations
+Can you show all valuations?,SELECT * FROM Valuations
+Show all oci changes,SELECT * FROM OCIChanges
+List all oci changes,SELECT * FROM OCIChanges
+Fetch all oci changes,SELECT * FROM OCIChanges
+Retrieve all oci changes,SELECT * FROM OCIChanges
+Give me all oci changes,SELECT * FROM OCIChanges
+Display all oci changes,SELECT * FROM OCIChanges
+What are the all oci changes?,SELECT * FROM OCIChanges
+Can you show all oci changes?,SELECT * FROM OCIChanges
+Show holdings where amortized cost is greater than 100000,SELECT * FROM PortfolioHoldings WHERE AmortizedCost > 100000
+List holdings where amortized cost is greater than 100000,SELECT * FROM PortfolioHoldings WHERE AmortizedCost > 100000
+Fetch holdings where amortized cost is greater than 100000,SELECT * FROM PortfolioHoldings WHERE AmortizedCost > 100000
+Retrieve holdings where amortized cost is greater than 100000,SELECT * FROM PortfolioHoldings WHERE AmortizedCost > 100000
+Give me holdings where amortized cost is greater than 100000,SELECT * FROM PortfolioHoldings WHERE AmortizedCost > 100000
+Display holdings where amortized cost is greater than 100000,SELECT * FROM PortfolioHoldings WHERE AmortizedCost > 100000
+What are the holdings where amortized cost is greater than 100000?,SELECT * FROM PortfolioHoldings WHERE AmortizedCost > 100000
+Can you show holdings where amortized cost is greater than 100000?,SELECT * FROM PortfolioHoldings WHERE AmortizedCost > 100000
+Show securities with coupon rate less than 5,SELECT * FROM FixedIncomeSecurities WHERE CouponRate < 5
+List securities with coupon rate less than 5,SELECT * FROM FixedIncomeSecurities WHERE CouponRate < 5
+Fetch securities with coupon rate less than 5,SELECT * FROM FixedIncomeSecurities WHERE CouponRate < 5
+Retrieve securities with coupon rate less than 5,SELECT * FROM FixedIncomeSecurities WHERE CouponRate < 5
+Give me securities with coupon rate less than 5,SELECT * FROM FixedIncomeSecurities WHERE CouponRate < 5
+Display securities with coupon rate less than 5,SELECT * FROM FixedIncomeSecurities WHERE CouponRate < 5
+What are the securities with coupon rate less than 5?,SELECT * FROM FixedIncomeSecurities WHERE CouponRate < 5
+Can you show securities with coupon rate less than 5?,SELECT * FROM FixedIncomeSecurities WHERE CouponRate < 5
+Show valuations with market value equal to 50000,SELECT * FROM Valuations WHERE MarketValue = 50000
+List valuations with market value equal to 50000,SELECT * FROM Valuations WHERE MarketValue = 50000
+Fetch valuations with market value equal to 50000,SELECT * FROM Valuations WHERE MarketValue = 50000
+Retrieve valuations with market value equal to 50000,SELECT * FROM Valuations WHERE MarketValue = 50000
+Give me valuations with market value equal to 50000,SELECT * FROM Valuations WHERE MarketValue = 50000
+Display valuations with market value equal to 50000,SELECT * FROM Valuations WHERE MarketValue = 50000
+What are the valuations with market value equal to 50000?,SELECT * FROM Valuations WHERE MarketValue = 50000
+Can you show valuations with market value equal to 50000?,SELECT * FROM Valuations WHERE MarketValue = 50000
+Show all holdings ordered by purchase date,SELECT * FROM PortfolioHoldings ORDER BY PurchaseDate
+List all holdings ordered by purchase date,SELECT * FROM PortfolioHoldings ORDER BY PurchaseDate
+Fetch all holdings ordered by purchase date,SELECT * FROM PortfolioHoldings ORDER BY PurchaseDate
+Retrieve all holdings ordered by purchase date,SELECT * FROM PortfolioHoldings ORDER BY PurchaseDate
+Give me all holdings ordered by purchase date,SELECT * FROM PortfolioHoldings ORDER BY PurchaseDate
+Display all holdings ordered by purchase date,SELECT * FROM PortfolioHoldings ORDER BY PurchaseDate
+What are the all holdings ordered by purchase date?,SELECT * FROM PortfolioHoldings ORDER BY PurchaseDate
+Can you show all holdings ordered by purchase date?,SELECT * FROM PortfolioHoldings ORDER BY PurchaseDate
+Show securities ordered by maturity date descending,SELECT * FROM FixedIncomeSecurities ORDER BY MaturityDate DESC
+List securities ordered by maturity date descending,SELECT * FROM FixedIncomeSecurities ORDER BY MaturityDate DESC
+Fetch securities ordered by maturity date descending,SELECT * FROM FixedIncomeSecurities ORDER BY MaturityDate DESC
+Retrieve securities ordered by maturity date descending,SELECT * FROM FixedIncomeSecurities ORDER BY MaturityDate DESC
+Give me securities ordered by maturity date descending,SELECT * FROM FixedIncomeSecurities ORDER BY MaturityDate DESC
+Display securities ordered by maturity date descending,SELECT * FROM FixedIncomeSecurities ORDER BY MaturityDate DESC
+What are the securities ordered by maturity date descending?,SELECT * FROM FixedIncomeSecurities ORDER BY MaturityDate DESC
+Can you show securities ordered by maturity date descending?,SELECT * FROM FixedIncomeSecurities ORDER BY MaturityDate DESC
+Show top 5 portfolios with longest descriptions,SELECT TOP 5 * FROM Portfolios ORDER BY LEN(Description) DESC
+List top 5 portfolios with longest descriptions,SELECT TOP 5 * FROM Portfolios ORDER BY LEN(Description) DESC
+Fetch top 5 portfolios with longest descriptions,SELECT TOP 5 * FROM Portfolios ORDER BY LEN(Description) DESC
+Retrieve top 5 portfolios with longest descriptions,SELECT TOP 5 * FROM Portfolios ORDER BY LEN(Description) DESC
+Give me top 5 portfolios with longest descriptions,SELECT TOP 5 * FROM Portfolios ORDER BY LEN(Description) DESC
+Display top 5 portfolios with longest descriptions,SELECT TOP 5 * FROM Portfolios ORDER BY LEN(Description) DESC
+What are the top 5 portfolios with longest descriptions?,SELECT TOP 5 * FROM Portfolios ORDER BY LEN(Description) DESC
+Can you show top 5 portfolios with longest descriptions?,SELECT TOP 5 * FROM Portfolios ORDER BY LEN(Description) DESC
+Show top 10 securities with highest coupon rate,SELECT TOP 10 * FROM FixedIncomeSecurities ORDER BY CouponRate DESC
+List top 10 securities with highest coupon rate,SELECT TOP 10 * FROM FixedIncomeSecurities ORDER BY CouponRate DESC
+Fetch top 10 securities with highest coupon rate,SELECT TOP 10 * FROM FixedIncomeSecurities ORDER BY CouponRate DESC
+Retrieve top 10 securities with highest coupon rate,SELECT TOP 10 * FROM FixedIncomeSecurities ORDER BY CouponRate DESC
+Give me top 10 securities with highest coupon rate,SELECT TOP 10 * FROM FixedIncomeSecurities ORDER BY CouponRate DESC
+Display top 10 securities with highest coupon rate,SELECT TOP 10 * FROM FixedIncomeSecurities ORDER BY CouponRate DESC
+What are the top 10 securities with highest coupon rate?,SELECT TOP 10 * FROM FixedIncomeSecurities ORDER BY CouponRate DESC
+Can you show top 10 securities with highest coupon rate?,SELECT TOP 10 * FROM FixedIncomeSecurities ORDER BY CouponRate DESC
+Show portfolios that contain the word 'sovereign',SELECT * FROM Portfolios WHERE PortfolioName LIKE '%Sovereign%'
+List portfolios that contain the word 'sovereign',SELECT * FROM Portfolios WHERE PortfolioName LIKE '%Sovereign%'
+Fetch portfolios that contain the word 'sovereign',SELECT * FROM Portfolios WHERE PortfolioName LIKE '%Sovereign%'
+Retrieve portfolios that contain the word 'sovereign',SELECT * FROM Portfolios WHERE PortfolioName LIKE '%Sovereign%'
+Give me portfolios that contain the word 'sovereign',SELECT * FROM Portfolios WHERE PortfolioName LIKE '%Sovereign%'
+Display portfolios that contain the word 'sovereign',SELECT * FROM Portfolios WHERE PortfolioName LIKE '%Sovereign%'
+What are the portfolios that contain the word 'sovereign'?,SELECT * FROM Portfolios WHERE PortfolioName LIKE '%Sovereign%'
+Can you show portfolios that contain the word 'sovereign'?,SELECT * FROM Portfolios WHERE PortfolioName LIKE '%Sovereign%'
+Show holdings purchased between 2021 and 2022,SELECT * FROM PortfolioHoldings WHERE PurchaseDate BETWEEN '2021-01-01' AND '2022-12-31'
+List holdings purchased between 2021 and 2022,SELECT * FROM PortfolioHoldings WHERE PurchaseDate BETWEEN '2021-01-01' AND '2022-12-31'
+Fetch holdings purchased between 2021 and 2022,SELECT * FROM PortfolioHoldings WHERE PurchaseDate BETWEEN '2021-01-01' AND '2022-12-31'
+Retrieve holdings purchased between 2021 and 2022,SELECT * FROM PortfolioHoldings WHERE PurchaseDate BETWEEN '2021-01-01' AND '2022-12-31'
+Give me holdings purchased between 2021 and 2022,SELECT * FROM PortfolioHoldings WHERE PurchaseDate BETWEEN '2021-01-01' AND '2022-12-31'
+Display holdings purchased between 2021 and 2022,SELECT * FROM PortfolioHoldings WHERE PurchaseDate BETWEEN '2021-01-01' AND '2022-12-31'
+What are the holdings purchased between 2021 and 2022?,SELECT * FROM PortfolioHoldings WHERE PurchaseDate BETWEEN '2021-01-01' AND '2022-12-31'
+Can you show holdings purchased between 2021 and 2022?,SELECT * FROM PortfolioHoldings WHERE PurchaseDate BETWEEN '2021-01-01' AND '2022-12-31'
+Show securities with currency in usd or eur,"SELECT * FROM FixedIncomeSecurities WHERE CurrencyCode IN ('USD', 'EUR')"
+List securities with currency in usd or eur,"SELECT * FROM FixedIncomeSecurities WHERE CurrencyCode IN ('USD', 'EUR')"
+Fetch securities with currency in usd or eur,"SELECT * FROM FixedIncomeSecurities WHERE CurrencyCode IN ('USD', 'EUR')"
+Retrieve securities with currency in usd or eur,"SELECT * FROM FixedIncomeSecurities WHERE CurrencyCode IN ('USD', 'EUR')"
+Give me securities with currency in usd or eur,"SELECT * FROM FixedIncomeSecurities WHERE CurrencyCode IN ('USD', 'EUR')"
+Display securities with currency in usd or eur,"SELECT * FROM FixedIncomeSecurities WHERE CurrencyCode IN ('USD', 'EUR')"
+What are the securities with currency in usd or eur?,"SELECT * FROM FixedIncomeSecurities WHERE CurrencyCode IN ('USD', 'EUR')"
+Can you show securities with currency in usd or eur?,"SELECT * FROM FixedIncomeSecurities WHERE CurrencyCode IN ('USD', 'EUR')"
+Show securities where maturity date is missing,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate IS NULL
+List securities where maturity date is missing,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate IS NULL
+Fetch securities where maturity date is missing,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate IS NULL
+Retrieve securities where maturity date is missing,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate IS NULL
+Give me securities where maturity date is missing,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate IS NULL
+Display securities where maturity date is missing,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate IS NULL
+What are the securities where maturity date is missing?,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate IS NULL
+Can you show securities where maturity date is missing?,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate IS NULL
+Show each portfolio and the isin of securities it holds,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId"
+List each portfolio and the isin of securities it holds,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId"
+Fetch each portfolio and the isin of securities it holds,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId"
+Retrieve each portfolio and the isin of securities it holds,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId"
+Give me each portfolio and the isin of securities it holds,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId"
+Display each portfolio and the isin of securities it holds,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId"
+What are the each portfolio and the isin of securities it holds?,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId"
+Can you show each portfolio and the isin of securities it holds?,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId"
+Show portfolio names with unrealized gains,"SELECT p.PortfolioName, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId"
+List portfolio names with unrealized gains,"SELECT p.PortfolioName, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId"
+Fetch portfolio names with unrealized gains,"SELECT p.PortfolioName, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId"
+Retrieve portfolio names with unrealized gains,"SELECT p.PortfolioName, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId"
+Give me portfolio names with unrealized gains,"SELECT p.PortfolioName, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId"
+Display portfolio names with unrealized gains,"SELECT p.PortfolioName, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId"
+What are the portfolio names with unrealized gains?,"SELECT p.PortfolioName, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId"
+Can you show portfolio names with unrealized gains?,"SELECT p.PortfolioName, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId"
+Show total amortized cost per security,"SELECT SecurityId, SUM(AmortizedCost) AS TotalCost FROM PortfolioHoldings GROUP BY SecurityId"
+List total amortized cost per security,"SELECT SecurityId, SUM(AmortizedCost) AS TotalCost FROM PortfolioHoldings GROUP BY SecurityId"
+Fetch total amortized cost per security,"SELECT SecurityId, SUM(AmortizedCost) AS TotalCost FROM PortfolioHoldings GROUP BY SecurityId"
+Retrieve total amortized cost per security,"SELECT SecurityId, SUM(AmortizedCost) AS TotalCost FROM PortfolioHoldings GROUP BY SecurityId"
+Give me total amortized cost per security,"SELECT SecurityId, SUM(AmortizedCost) AS TotalCost FROM PortfolioHoldings GROUP BY SecurityId"
+Display total amortized cost per security,"SELECT SecurityId, SUM(AmortizedCost) AS TotalCost FROM PortfolioHoldings GROUP BY SecurityId"
+What are the total amortized cost per security?,"SELECT SecurityId, SUM(AmortizedCost) AS TotalCost FROM PortfolioHoldings GROUP BY SecurityId"
+Can you show total amortized cost per security?,"SELECT SecurityId, SUM(AmortizedCost) AS TotalCost FROM PortfolioHoldings GROUP BY SecurityId"
+Show average coupon rate by currency,"SELECT CurrencyCode, AVG(CouponRate) FROM FixedIncomeSecurities GROUP BY CurrencyCode"
+List average coupon rate by currency,"SELECT CurrencyCode, AVG(CouponRate) FROM FixedIncomeSecurities GROUP BY CurrencyCode"
+Fetch average coupon rate by currency,"SELECT CurrencyCode, AVG(CouponRate) FROM FixedIncomeSecurities GROUP BY CurrencyCode"
+Retrieve average coupon rate by currency,"SELECT CurrencyCode, AVG(CouponRate) FROM FixedIncomeSecurities GROUP BY CurrencyCode"
+Give me average coupon rate by currency,"SELECT CurrencyCode, AVG(CouponRate) FROM FixedIncomeSecurities GROUP BY CurrencyCode"
+Display average coupon rate by currency,"SELECT CurrencyCode, AVG(CouponRate) FROM FixedIncomeSecurities GROUP BY CurrencyCode"
+What are the average coupon rate by currency?,"SELECT CurrencyCode, AVG(CouponRate) FROM FixedIncomeSecurities GROUP BY CurrencyCode"
+Can you show average coupon rate by currency?,"SELECT CurrencyCode, AVG(CouponRate) FROM FixedIncomeSecurities GROUP BY CurrencyCode"
+Show currencies where average coupon rate is above 6,"SELECT CurrencyCode, AVG(CouponRate) AS AvgRate FROM FixedIncomeSecurities GROUP BY CurrencyCode HAVING AVG(CouponRate) > 6"
+List currencies where average coupon rate is above 6,"SELECT CurrencyCode, AVG(CouponRate) AS AvgRate FROM FixedIncomeSecurities GROUP BY CurrencyCode HAVING AVG(CouponRate) > 6"
+Fetch currencies where average coupon rate is above 6,"SELECT CurrencyCode, AVG(CouponRate) AS AvgRate FROM FixedIncomeSecurities GROUP BY CurrencyCode HAVING AVG(CouponRate) > 6"
+Retrieve currencies where average coupon rate is above 6,"SELECT CurrencyCode, AVG(CouponRate) AS AvgRate FROM FixedIncomeSecurities GROUP BY CurrencyCode HAVING AVG(CouponRate) > 6"
+Give me currencies where average coupon rate is above 6,"SELECT CurrencyCode, AVG(CouponRate) AS AvgRate FROM FixedIncomeSecurities GROUP BY CurrencyCode HAVING AVG(CouponRate) > 6"
+Display currencies where average coupon rate is above 6,"SELECT CurrencyCode, AVG(CouponRate) AS AvgRate FROM FixedIncomeSecurities GROUP BY CurrencyCode HAVING AVG(CouponRate) > 6"
+What are the currencies where average coupon rate is above 6?,"SELECT CurrencyCode, AVG(CouponRate) AS AvgRate FROM FixedIncomeSecurities GROUP BY CurrencyCode HAVING AVG(CouponRate) > 6"
+Can you show currencies where average coupon rate is above 6?,"SELECT CurrencyCode, AVG(CouponRate) AS AvgRate FROM FixedIncomeSecurities GROUP BY CurrencyCode HAVING AVG(CouponRate) > 6"
+Show holdings with market value above average,SELECT * FROM Valuations WHERE MarketValue > (SELECT AVG(MarketValue) FROM Valuations)
+List holdings with market value above average,SELECT * FROM Valuations WHERE MarketValue > (SELECT AVG(MarketValue) FROM Valuations)
+Fetch holdings with market value above average,SELECT * FROM Valuations WHERE MarketValue > (SELECT AVG(MarketValue) FROM Valuations)
+Retrieve holdings with market value above average,SELECT * FROM Valuations WHERE MarketValue > (SELECT AVG(MarketValue) FROM Valuations)
+Give me holdings with market value above average,SELECT * FROM Valuations WHERE MarketValue > (SELECT AVG(MarketValue) FROM Valuations)
+Display holdings with market value above average,SELECT * FROM Valuations WHERE MarketValue > (SELECT AVG(MarketValue) FROM Valuations)
+What are the holdings with market value above average?,SELECT * FROM Valuations WHERE MarketValue > (SELECT AVG(MarketValue) FROM Valuations)
+Can you show holdings with market value above average?,SELECT * FROM Valuations WHERE MarketValue > (SELECT AVG(MarketValue) FROM Valuations)
+Show find portfolios that have at least one holding,SELECT * FROM Portfolios WHERE EXISTS (SELECT 1 FROM PortfolioHoldings WHERE Portfolios.PortfolioId = PortfolioHoldings.PortfolioId)
+List find portfolios that have at least one holding,SELECT * FROM Portfolios WHERE EXISTS (SELECT 1 FROM PortfolioHoldings WHERE Portfolios.PortfolioId = PortfolioHoldings.PortfolioId)
+Fetch find portfolios that have at least one holding,SELECT * FROM Portfolios WHERE EXISTS (SELECT 1 FROM PortfolioHoldings WHERE Portfolios.PortfolioId = PortfolioHoldings.PortfolioId)
+Retrieve find portfolios that have at least one holding,SELECT * FROM Portfolios WHERE EXISTS (SELECT 1 FROM PortfolioHoldings WHERE Portfolios.PortfolioId = PortfolioHoldings.PortfolioId)
+Give me find portfolios that have at least one holding,SELECT * FROM Portfolios WHERE EXISTS (SELECT 1 FROM PortfolioHoldings WHERE Portfolios.PortfolioId = PortfolioHoldings.PortfolioId)
+Display find portfolios that have at least one holding,SELECT * FROM Portfolios WHERE EXISTS (SELECT 1 FROM PortfolioHoldings WHERE Portfolios.PortfolioId = PortfolioHoldings.PortfolioId)
+What are the find portfolios that have at least one holding?,SELECT * FROM Portfolios WHERE EXISTS (SELECT 1 FROM PortfolioHoldings WHERE Portfolios.PortfolioId = PortfolioHoldings.PortfolioId)
+Can you show find portfolios that have at least one holding?,SELECT * FROM Portfolios WHERE EXISTS (SELECT 1 FROM PortfolioHoldings WHERE Portfolios.PortfolioId = PortfolioHoldings.PortfolioId)
+Show portfolio names and corresponding isins for holdings purchased after 2020,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE h.PurchaseDate > '2020-01-01'"
+List portfolio names and corresponding isins for holdings purchased after 2020,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE h.PurchaseDate > '2020-01-01'"
+Fetch portfolio names and corresponding isins for holdings purchased after 2020,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE h.PurchaseDate > '2020-01-01'"
+Retrieve portfolio names and corresponding isins for holdings purchased after 2020,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE h.PurchaseDate > '2020-01-01'"
+Give me portfolio names and corresponding isins for holdings purchased after 2020,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE h.PurchaseDate > '2020-01-01'"
+Display portfolio names and corresponding isins for holdings purchased after 2020,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE h.PurchaseDate > '2020-01-01'"
+What are the portfolio names and corresponding isins for holdings purchased after 2020?,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE h.PurchaseDate > '2020-01-01'"
+Can you show portfolio names and corresponding isins for holdings purchased after 2020?,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE h.PurchaseDate > '2020-01-01'"
+Show securities with their portfolio names for currency code usd,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE f.CurrencyCode = 'USD'"
+List securities with their portfolio names for currency code usd,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE f.CurrencyCode = 'USD'"
+Fetch securities with their portfolio names for currency code usd,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE f.CurrencyCode = 'USD'"
+Retrieve securities with their portfolio names for currency code usd,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE f.CurrencyCode = 'USD'"
+Give me securities with their portfolio names for currency code usd,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE f.CurrencyCode = 'USD'"
+Display securities with their portfolio names for currency code usd,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE f.CurrencyCode = 'USD'"
+What are the securities with their portfolio names for currency code usd?,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE f.CurrencyCode = 'USD'"
+Can you show securities with their portfolio names for currency code usd?,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId WHERE f.CurrencyCode = 'USD'"
+Show portfolio and holding details where unrealized gain exceeds 10000,"SELECT p.PortfolioName, h.Quantity, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId WHERE o.UnrealizedGainLoss > 10000"
+List portfolio and holding details where unrealized gain exceeds 10000,"SELECT p.PortfolioName, h.Quantity, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId WHERE o.UnrealizedGainLoss > 10000"
+Fetch portfolio and holding details where unrealized gain exceeds 10000,"SELECT p.PortfolioName, h.Quantity, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId WHERE o.UnrealizedGainLoss > 10000"
+Retrieve portfolio and holding details where unrealized gain exceeds 10000,"SELECT p.PortfolioName, h.Quantity, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId WHERE o.UnrealizedGainLoss > 10000"
+Give me portfolio and holding details where unrealized gain exceeds 10000,"SELECT p.PortfolioName, h.Quantity, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId WHERE o.UnrealizedGainLoss > 10000"
+Display portfolio and holding details where unrealized gain exceeds 10000,"SELECT p.PortfolioName, h.Quantity, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId WHERE o.UnrealizedGainLoss > 10000"
+What are the portfolio and holding details where unrealized gain exceeds 10000?,"SELECT p.PortfolioName, h.Quantity, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId WHERE o.UnrealizedGainLoss > 10000"
+Can you show portfolio and holding details where unrealized gain exceeds 10000?,"SELECT p.PortfolioName, h.Quantity, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId WHERE o.UnrealizedGainLoss > 10000"
+Show all valuations along with portfolio names,"SELECT v.ValuationDate, v.MarketValue, p.PortfolioName FROM Valuations v JOIN PortfolioHoldings h ON v.HoldingId = h.HoldingId JOIN Portfolios p ON h.PortfolioId = p.PortfolioId"
+List all valuations along with portfolio names,"SELECT v.ValuationDate, v.MarketValue, p.PortfolioName FROM Valuations v JOIN PortfolioHoldings h ON v.HoldingId = h.HoldingId JOIN Portfolios p ON h.PortfolioId = p.PortfolioId"
+Fetch all valuations along with portfolio names,"SELECT v.ValuationDate, v.MarketValue, p.PortfolioName FROM Valuations v JOIN PortfolioHoldings h ON v.HoldingId = h.HoldingId JOIN Portfolios p ON h.PortfolioId = p.PortfolioId"
+Retrieve all valuations along with portfolio names,"SELECT v.ValuationDate, v.MarketValue, p.PortfolioName FROM Valuations v JOIN PortfolioHoldings h ON v.HoldingId = h.HoldingId JOIN Portfolios p ON h.PortfolioId = p.PortfolioId"
+Give me all valuations along with portfolio names,"SELECT v.ValuationDate, v.MarketValue, p.PortfolioName FROM Valuations v JOIN PortfolioHoldings h ON v.HoldingId = h.HoldingId JOIN Portfolios p ON h.PortfolioId = p.PortfolioId"
+Display all valuations along with portfolio names,"SELECT v.ValuationDate, v.MarketValue, p.PortfolioName FROM Valuations v JOIN PortfolioHoldings h ON v.HoldingId = h.HoldingId JOIN Portfolios p ON h.PortfolioId = p.PortfolioId"
+What are the all valuations along with portfolio names?,"SELECT v.ValuationDate, v.MarketValue, p.PortfolioName FROM Valuations v JOIN PortfolioHoldings h ON v.HoldingId = h.HoldingId JOIN Portfolios p ON h.PortfolioId = p.PortfolioId"
+Can you show all valuations along with portfolio names?,"SELECT v.ValuationDate, v.MarketValue, p.PortfolioName FROM Valuations v JOIN PortfolioHoldings h ON v.HoldingId = h.HoldingId JOIN Portfolios p ON h.PortfolioId = p.PortfolioId"
+Show all securities with isin containing 'us',SELECT * FROM FixedIncomeSecurities WHERE ISIN LIKE '%US%'
+List all securities with isin containing 'us',SELECT * FROM FixedIncomeSecurities WHERE ISIN LIKE '%US%'
+Fetch all securities with isin containing 'us',SELECT * FROM FixedIncomeSecurities WHERE ISIN LIKE '%US%'
+Retrieve all securities with isin containing 'us',SELECT * FROM FixedIncomeSecurities WHERE ISIN LIKE '%US%'
+Give me all securities with isin containing 'us',SELECT * FROM FixedIncomeSecurities WHERE ISIN LIKE '%US%'
+Display all securities with isin containing 'us',SELECT * FROM FixedIncomeSecurities WHERE ISIN LIKE '%US%'
+What are the all securities with isin containing 'us'?,SELECT * FROM FixedIncomeSecurities WHERE ISIN LIKE '%US%'
+Can you show all securities with isin containing 'us'?,SELECT * FROM FixedIncomeSecurities WHERE ISIN LIKE '%US%'
+Show find portfolios whose description mentions 'income',SELECT * FROM Portfolios WHERE Description LIKE '%Income%'
+List find portfolios whose description mentions 'income',SELECT * FROM Portfolios WHERE Description LIKE '%Income%'
+Fetch find portfolios whose description mentions 'income',SELECT * FROM Portfolios WHERE Description LIKE '%Income%'
+Retrieve find portfolios whose description mentions 'income',SELECT * FROM Portfolios WHERE Description LIKE '%Income%'
+Give me find portfolios whose description mentions 'income',SELECT * FROM Portfolios WHERE Description LIKE '%Income%'
+Display find portfolios whose description mentions 'income',SELECT * FROM Portfolios WHERE Description LIKE '%Income%'
+What are the find portfolios whose description mentions 'income'?,SELECT * FROM Portfolios WHERE Description LIKE '%Income%'
+Can you show find portfolios whose description mentions 'income'?,SELECT * FROM Portfolios WHERE Description LIKE '%Income%'
+Show holdings purchased where portfolio name contains 'corporate',SELECT * FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId WHERE p.PortfolioName LIKE '%Corporate%'
+List holdings purchased where portfolio name contains 'corporate',SELECT * FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId WHERE p.PortfolioName LIKE '%Corporate%'
+Fetch holdings purchased where portfolio name contains 'corporate',SELECT * FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId WHERE p.PortfolioName LIKE '%Corporate%'
+Retrieve holdings purchased where portfolio name contains 'corporate',SELECT * FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId WHERE p.PortfolioName LIKE '%Corporate%'
+Give me holdings purchased where portfolio name contains 'corporate',SELECT * FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId WHERE p.PortfolioName LIKE '%Corporate%'
+Display holdings purchased where portfolio name contains 'corporate',SELECT * FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId WHERE p.PortfolioName LIKE '%Corporate%'
+What are the holdings purchased where portfolio name contains 'corporate'?,SELECT * FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId WHERE p.PortfolioName LIKE '%Corporate%'
+Can you show holdings purchased where portfolio name contains 'corporate'?,SELECT * FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId WHERE p.PortfolioName LIKE '%Corporate%'
+Show find securities maturing in 2030,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate LIKE '2030%'
+List find securities maturing in 2030,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate LIKE '2030%'
+Fetch find securities maturing in 2030,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate LIKE '2030%'
+Retrieve find securities maturing in 2030,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate LIKE '2030%'
+Give me find securities maturing in 2030,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate LIKE '2030%'
+Display find securities maturing in 2030,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate LIKE '2030%'
+What are the find securities maturing in 2030?,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate LIKE '2030%'
+Can you show find securities maturing in 2030?,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate LIKE '2030%'
+Show holdings where amortized cost is greater than 100000,SELECT * FROM PortfolioHoldings WHERE AmortizedCost > 100000
+Show securities with coupon rate less than 5,SELECT * FROM FixedIncomeSecurities WHERE CouponRate < 5
+Show valuations with market value equal to 50000,SELECT * FROM Valuations WHERE MarketValue = 50000
+List all holdings ordered by purchase date,SELECT * FROM PortfolioHoldings ORDER BY PurchaseDate
+Show securities ordered by maturity date descending,SELECT * FROM FixedIncomeSecurities ORDER BY MaturityDate DESC
+Show top 5 portfolios with longest descriptions,SELECT TOP 5 * FROM Portfolios ORDER BY LEN(Description) DESC
+Show top 10 securities with highest coupon rate,SELECT TOP 10 * FROM FixedIncomeSecurities ORDER BY CouponRate DESC
+List portfolios that contain the word 'Sovereign',SELECT * FROM Portfolios WHERE PortfolioName LIKE '%Sovereign%'
+Show holdings purchased between 2021 and 2022,SELECT * FROM PortfolioHoldings WHERE PurchaseDate BETWEEN '2021-01-01' AND '2022-12-31'
+Show securities with currency in USD or EUR,"SELECT * FROM FixedIncomeSecurities WHERE CurrencyCode IN ('USD', 'EUR')"
+List securities where maturity date is missing,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate IS NULL
+Show each portfolio and the ISIN of securities it holds,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON h.SecurityId = f.SecurityId"
+List portfolio names with unrealized gains,"SELECT p.PortfolioName, o.UnrealizedGainLoss FROM PortfolioHoldings h JOIN Portfolios p ON h.PortfolioId = p.PortfolioId JOIN OCIChanges o ON o.HoldingId = h.HoldingId"
+Show total amortized cost per security,"SELECT SecurityId, SUM(AmortizedCost) AS TotalCost FROM PortfolioHoldings GROUP BY SecurityId"
+Show average coupon rate by currency,"SELECT CurrencyCode, AVG(CouponRate) FROM FixedIncomeSecurities GROUP BY CurrencyCode"
+List currencies where average coupon rate is above 6,"SELECT CurrencyCode, AVG(CouponRate) AS AvgRate FROM FixedIncomeSecurities GROUP BY CurrencyCode HAVING AVG(CouponRate) > 6"
+Show holdings with market value above average,SELECT * FROM Valuations WHERE MarketValue > (SELECT AVG(MarketValue) FROM Valuations)
+Find portfolios that have at least one holding,SELECT * FROM Portfolios WHERE EXISTS (SELECT 1 FROM PortfolioHoldings WHERE Portfolios.PortfolioId = PortfolioHoldings.PortfolioId)
+Show records from PortfolioHoldings where CouponRate greater than 97212,SELECT * FROM PortfolioHoldings WHERE CouponRate > 97212
+Show records from PortfolioHoldings where AmortizedCost less than 33692,SELECT * FROM PortfolioHoldings WHERE AmortizedCost < 33692
+Show records from PortfolioHoldings where UnrealizedGainLoss equals 6527,SELECT * FROM PortfolioHoldings WHERE UnrealizedGainLoss = 6527
+Show all holdings ordered by CouponRate descending,SELECT * FROM PortfolioHoldings ORDER BY CouponRate DESC
+Show top 5 holdings by CouponRate,SELECT TOP 5 * FROM PortfolioHoldings ORDER BY CouponRate DESC
+Show all holdings ordered by AmortizedCost descending,SELECT * FROM PortfolioHoldings ORDER BY AmortizedCost DESC
+Show top 5 holdings by AmortizedCost,SELECT TOP 5 * FROM PortfolioHoldings ORDER BY AmortizedCost DESC
+Show all holdings ordered by UnrealizedGainLoss descending,SELECT * FROM PortfolioHoldings ORDER BY UnrealizedGainLoss DESC
+Show top 5 holdings by UnrealizedGainLoss,SELECT TOP 5 * FROM PortfolioHoldings ORDER BY UnrealizedGainLoss DESC
+Show average coupon rate grouped by CurrencyCode,"SELECT CurrencyCode, AVG(CouponRate) AS AvgCoupon FROM FixedIncomeSecurities GROUP BY CurrencyCode"
+List currencies with average coupon rate greater than 5,"SELECT CurrencyCode, AVG(CouponRate) AS AvgCoupon FROM FixedIncomeSecurities GROUP BY CurrencyCode HAVING AVG(CouponRate) > 5"
+List securities and their corresponding portfolios,"SELECT p.PortfolioName, f.ISIN FROM PortfolioHoldings ph JOIN Portfolios p ON ph.PortfolioId = p.PortfolioId JOIN FixedIncomeSecurities f ON ph.SecurityId = f.SecurityId"
+Find portfolios that have at least one holding,SELECT * FROM Portfolios WHERE EXISTS (SELECT 1 FROM PortfolioHoldings WHERE Portfolios.PortfolioId = PortfolioHoldings.PortfolioId)
+Show holdings with market value greater than average,SELECT * FROM Valuations WHERE MarketValue > (SELECT AVG(MarketValue) FROM Valuations)
+List portfolios containing the word Sovereign,SELECT * FROM Portfolios WHERE PortfolioName LIKE '%Sovereign%'
+Show holdings where maturity date is missing,SELECT * FROM FixedIncomeSecurities WHERE MaturityDate IS NULL
+Show holdings purchased between 2019 and 2021,SELECT * FROM PortfolioHoldings WHERE PurchaseDate BETWEEN '2019-01-01' AND '2021-12-31'
+Show securities where currency is USD or EUR,"SELECT * FROM FixedIncomeSecurities WHERE CurrencyCode IN ('USD', 'EUR')"
+Show total amortized cost per security,"SELECT SecurityId, SUM(AmortizedCost) AS TotalCost FROM PortfolioHoldings GROUP BY SecurityId"
