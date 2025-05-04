@@ -136,7 +136,7 @@ FIN_SQL/
 ├── api_server.py
 ├── ui/index.html
 ├── model/t5_fixed_income_model_compact/
-├── data/
+├── data/ #sql Script & training data files
 ├── batch_predict.py
 ├── train_compact.py
 ├── DS_fixed_income_training_generator.py #Training Data script using Gen AI
@@ -155,7 +155,44 @@ python api_server.py
 # Visit http://localhost:8000
 ```
 
+# Demo database schema
+```
+This section gives just the tables and their relationships to understand the NL → SQL model context.
 
+
+    PORTFOLIOS {
+        int PortfolioId PK
+        string PortfolioName
+        string Description
+    }
+    FIXEDINCOMESECURITIES {
+        int SecurityId PK
+        string ISIN
+        string Ticker
+        decimal CouponRate
+        date MaturityDate
+    }
+    PORTFOLIOHOLDINGS {
+        int HoldingId PK
+        int PortfolioId FK
+        int SecurityId FK
+        decimal Quantity
+        decimal PurchasePrice
+    }
+    VALUATIONS {
+        int ValuationId PK
+        int HoldingId FK
+        date ValuationDate
+        decimal MarketValue
+    }
+    OCICHANGES {
+        int OCIChangeId PK
+        int HoldingId FK
+        decimal UnrealizedGainLoss
+    }
+
+
+```
 ---
 
 ## ⚠️ Limitations
