@@ -1,0 +1,30 @@
+# Minimal .gitignore for SQL/C# projects
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# NuGet
+*.nupkg
+packages/
+
+# SQL files
+*.ldf
+*.mdf
+*.bak
+
+# Sensitive data
+*.env
+*.secret
+connectionstrings.config
