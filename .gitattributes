@@ -1,1 +1,36 @@
+# Auto-detect text files and normalize line endings
+* text=auto
+
+# Preserve your existing rule
 *.safetensors filter=lfs diff=lfs merge=lfs -text
+
+# Force CRLF for Windows-specific files
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Force LF for shell scripts
+*.sh text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary
+*.dll binary
+*.exe binary
+*.safetensors binary  # Additional declaration for safety
+
+# SQL files
+*.sql text
+
+# C# files
+*.cs text diff=csharp
+
+# Config files
+*.config text
+*.json text
+
+# Markdown
+*.md text
