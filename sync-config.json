@@ -1,0 +1,11 @@
+{
+  "RepoType": "business",
+  "AssociatedDevRepo": "",
+  "SyncRules": {
+    "ExcludedPaths": ["/bin/", "/obj/", ".vs/", ".git/"],
+    "AllowedFileTypes": [".cs", ".sql", ".json", ".config", ".md"],
+    "MaxFileSizeKB": 1024,
+    "SyncBranches": ["main"]
+  },
+  "CompatibilitySignature": "smartfin-v1"
+}
