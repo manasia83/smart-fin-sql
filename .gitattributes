@@ -20,7 +20,6 @@
 *.zip binary
 *.dll binary
 *.exe binary
-*.safetensors binary  # Additional declaration for safety
 
 # SQL files
 *.sql text
@@ -34,3 +33,4 @@
 
 # Markdown
 *.md text
+nano .gitattributes
